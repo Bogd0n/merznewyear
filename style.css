@@ -1,0 +1,127 @@
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+.card {
+    text-align: center;
+    position: relative;
+    width: 400px;
+    height: 500px;
+    border-radius: 15px;
+    background: #fff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+.sky {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 40%;
+    background: linear-gradient(to bottom, #1e3c72, #2a5298);
+}
+.stars {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    border-radius: 50%;
+    animation: twinkling 2s infinite;
+}
+.stars:nth-child(1) { top: 20%; left: 30%; }
+.stars:nth-child(2) { top: 10%; left: 60%; }
+.stars:nth-child(3) { top: 15%; left: 80%; }
+@keyframes twinkling {
+    0%, 100% { opacity: 0.8; }
+    50% { opacity: 0.2; }
+}
+.snowman {
+    position: relative;
+    top: 40%;
+    margin: auto;
+}
+.head {
+    width: 60px;
+    height: 60px;
+    background: white;
+    border-radius: 50%;
+    position: relative;
+    margin: 0 auto;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.body {
+    width: 100px;
+    height: 100px;
+    background: white;
+    border-radius: 50%;
+    margin: 10px auto 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+.hat {
+    width: 70px;
+    height: 30px;
+    background: black;
+    border-radius: 2px;
+    position: absolute;
+    top: -10px;
+    left: calc(50% - 35px);
+}
+.scarf {
+    width: 80px;
+    height: 15px;
+    background: red;
+    position: absolute;
+    top: 60px;
+    left: calc(50% - 40px);
+}
+.eyes {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+}
+.eyes:after {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background: black;
+    border-radius: 50%;
+    left: 20px;
+    top: 0;
+}
+.nose {
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 5px 5px 5px 0;
+    border-color: transparent orange transparent transparent;
+    transform: translateX(-50%);
+}
+.greeting {
+    position: absolute;
+    bottom: 20px;
+    width: 100%;
+    text-align: center;
+}
+.greeting h1 {
+    font-size: 24px;
+    color: #1e3c72;
+}
+.greeting p {
+    font-size: 16px;
+    color: #444;
+}
